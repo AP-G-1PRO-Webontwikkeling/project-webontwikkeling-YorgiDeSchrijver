@@ -557,7 +557,26 @@
     ],
     "director": "Quentin Tarantino",
     "writer": "Quentin Tarantino",
-    "actors": "Leonardo DiCaprio, Brad Pitt, Margot Robbie, Emile Hirsch",
+    "actors": [
+      {
+        "id": 35,
+        "name": "Brad Pitt",
+        "gender": "M",
+        "age": 60
+      },
+      {
+        "id": 33,
+        "name": "Margot Robbie",
+        "gender": "F",
+        "age": 33
+      },
+      {
+        "id": 33,
+        "name": "Emile Hirsch",
+        "gender": "F",
+        "age": 38
+      }
+    ],
     "plot": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
     "language": [
       "English",
