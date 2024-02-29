@@ -1,0 +1,591 @@
+[
+  {
+    "id": 1,
+    "title": "They Shall Not Grow Old",
+    "year": 2018,
+    "released": "2019-02-01",
+    "runtime": "99 min",
+    "genre": [
+      "Documentary",
+      "History",
+      "War"
+    ],
+    "director": "Peter Jackson",
+    "writer": "Peter Jackson",
+    "actors": [
+      {
+        "id": 1,
+        "name": "Mark Kermode",
+        "gender": "M",
+        "age": 60
+      },
+      {
+        "id": 2,
+        "name": "Peter Jackson",
+        "gender": "M",
+        "age": 61
+      }
+    ],
+    "plot": "A documentary about World War I with never-before-seen footage to commemorate the centennial of the end of the war.",
+    "language": "English",
+    "country": "UK, New Zealand",
+    "awards": "Nominated for 1 BAFTA Film Award. Another 4 wins & 10 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZWI3ZThmYzUtNDJhOC00ZWY4LThiNmMtZDgxNjE3Yzk4NDU1XkEyXkFqcGdeQXVyNTk5Nzg1NjQ@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "8.3/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "100%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "91/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Warner Bros. Pictures"
+  },
+  {
+    "id": 2,
+    "title": "Midnight Family",
+    "year": 2019,
+    "released": "2019-12-06",
+    "runtime": "81 min",
+    "genre": [
+      "Documentary",
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "director": "Luke Lorentzen",
+    "writer": "Luke Lorentzen",
+    "actors": [
+      {
+        "id": 3,
+        "name": "Fer Ochoa",
+        "gender": "M",
+        "age": 35
+      },
+      {
+        "id": 4,
+        "name": "Josue Ochoa",
+        "gender": "M",
+        "age": 38
+      },
+      {
+        "id": 5,
+        "name": "Juan Ochoa",
+        "gender": "M",
+        "age": 30
+      }
+    ],
+    "plot": "In Mexico City's wealthiest neighborhoods, the Ochoa family runs a private ambulance, competing with other for-profit EMTs for patients in need of urgent help.",
+    "language": "Spanish",
+    "country": "Mexico",
+    "awards": "24 wins & 20 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMGYyZTk5MjYtNGY2ZS00NzRhLTgwMWMtZjhmMmQ4OGFkNTNiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "7.8/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "100%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "84/100"
+      }
+    ],
+    "type": "movie",
+    "production": "1091"
+  },
+  {
+    "id": 3,
+    "title": "Pain & Gain",
+    "year": 2013,
+    "released": "2013-04-26",
+    "runtime": "129 min",
+    "genre": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "director": "Michael Bay",
+    "writer": "Christopher Markus (screenplay), Stephen McFeely (screenplay), Pete Collins (based on the magazine articles by)",
+    "actors": [
+      {
+        "id": 6,
+        "name": "Mark Wahlberg",
+        "gender": "M",
+        "age": 51
+      },
+      {
+        "id": 7,
+        "name": "Dwayne Johnson",
+        "gender": "M",
+        "age": 50
+      },
+      {
+        "id": 8,
+        "name": "Anthony Mackie",
+        "gender": "M",
+        "age": 44
+      },
+      {
+        "id": 9,
+        "name": "Tony Shalhoub",
+        "gender": "M",
+        "age": 69
+      }
+    ],
+    "plot": "A trio of bodybuilders in Florida get caught up in an extortion ring and a kidnapping scheme that goes terribly wrong.",
+    "language": "English",
+    "country": "USA",
+    "awards": "4 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "6.4/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "50%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "45/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Paramount Studios"
+  },
+  {
+    "id": 4,
+    "title": "Marriage Story",
+    "year": 2019,
+    "released": "2019-12-06",
+    "runtime": "137 min",
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "director": "Noah Baumbach",
+    "writer": "Noah Baumbach",
+    "actors": [
+      {
+        "id": 10,
+        "name": "Adam Driver",
+        "gender": "M",
+        "age": 39
+      },
+      {
+        "id": 11,
+        "name": "Scarlett Johansson",
+        "gender": "F",
+        "age": 38
+      },
+      {
+        "id": 12,
+        "name": "Julia Greer",
+        "gender": "F",
+        "age": 48
+      },
+      {
+        "id": 13,
+        "name": "Azhy Robertson",
+        "gender": "M",
+        "age": 13
+      }
+    ],
+    "plot": "Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.",
+    "language": "English",
+    "country": [
+      "UK",
+      "USA"
+    ],
+    "awards": "Won 1 Golden Globe. Another 86 wins & 212 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGVmY2RjNDgtMTc3Yy00YmY0LTgwODItYzBjNWJhNTRlYjdkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "8.1/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "95%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "93/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Netflix"
+  },
+  {
+    "id": 5,
+    "title": "Little Women",
+    "year": 1994,
+    "released": "1994-12-25",
+    "runtime": "115 min",
+    "genre": [
+      "Drama",
+      "Family",
+      "Romance"
+    ],
+    "director": "Gillian Armstrong",
+    "writer": "Louisa May Alcott (novel), Robin Swicord (screenplay)",
+    "actors": [
+      {
+        "id": 14,
+        "name": "Winona Ryder",
+        "gender": "F",
+        "age": 51
+      },
+      {
+        "id": 15,
+        "name": "Gabriel Byrne",
+        "gender": "M",
+        "age": 72
+      },
+      {
+        "id": 16,
+        "name": "Trini Alvarado",
+        "gender": "F",
+        "age": 56
+      },
+      {
+        "id": 17,
+        "name": "Samantha Mathis",
+        "gender": "F",
+        "age": 52
+      }
+    ],
+    "plot": "The March sisters live and grow in post-Civil War America.",
+    "language": [
+      "English",
+      "German",
+      "French"
+    ],
+    "country": [
+      "USA",
+      "Canada"
+    ],
+    "awards": "Nominated for 3 Oscars. Another 5 wins & 15 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNmJhNTgzMWYtZTU5OC00MmE2LTlkN2UtNWE0MmJiNWJmNmZjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "7.3/10"
+      },
+      {
+        "source": "Metacritic",
+        "value": "87/100"
+      }
+    ],
+    "type": "movie",
+    "production": "N/A"
+  },
+  {
+    "id": 6,
+    "title": "Parasite",
+    "year": 2019,
+    "released": "2019-11-08",
+    "runtime": "132 min",
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Thriller"
+    ],
+    "director": "Bong Joon Ho",
+    "writer": "Bong Joon Ho (story), Bong Joon Ho (screenplay), Bong Joon Ho (story by), Jin Won Han (screenplay)",
+    "actors": [
+      {
+        "id": 18,
+        "name": "Kang-ho Song",
+        "gender": "M",
+        "age": 56
+      },
+      {
+        "id": 19,
+        "name": "Sun-kyun Lee",
+        "gender": "M",
+        "age": 48
+      },
+      {
+        "id": 20,
+        "name": "Yeo-jeong Joo",
+        "gender": "F",
+        "age": 61
+      },
+      {
+        "id": 21,
+        "name": "Woo-sik Choi",
+        "gender": "M",
+        "age": 37
+      }
+    ],
+    "plot": "All unemployed, Ki-taek and his family take peculiar interest in the wealthy and glamorous Parks, as they ingratiate themselves into their lives and get entangled in an unexpected incident.",
+    "language": [
+      "Korean",
+      "English"
+    ],
+    "country": "South Korea",
+    "awards": "Won 1 Golden Globe. Another 119 wins & 179 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "8.6/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "99%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "96/100"
+      }
+    ],
+    "type": "movie",
+    "production": "NEON"
+  },
+  {
+    "id": 7,
+    "title": "Knives Out",
+    "year": 2019,
+    "released": "2019-11-27",
+    "runtime": "130 min",
+    "genre": [
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "director": "Rian Johnson",
+    "writer": "Rian Johnson",
+    "actors": [
+      {
+        "id": 22,
+        "name": "Daniel Craig",
+        "gender": "M",
+        "age": 54
+      },
+      {
+        "id": 23,
+        "name": "Chris Evans",
+        "gender": "M",
+        "age": 41
+      },
+      {
+        "id": 24,
+        "name": "Ana de Armas",
+        "gender": "F",
+        "age": 34
+      },
+      {
+        "id": 25,
+        "name": "Jamie Lee Curtis",
+        "gender": "F",
+        "age": 64
+      }
+    ],
+    "plot": "A detective investigates the death of a patriarch of an eccentric, combative family.",
+    "language": [
+      "English",
+      "Spanish"
+    ],
+    "country": "USA",
+    "awards": "Nominated for 3 Golden Globes. Another 22 wins & 37 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "8.1/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "97%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "82/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Lionsgate"
+  },
+  {
+    "id": 8,
+    "title": "Dolemite Is My Name",
+    "year": 2019,
+    "released": "2019-10-25",
+    "runtime": "118 min",
+    "genre": [
+      "Biography",
+      "Comedy",
+      "Drama"
+    ],
+    "director": "Craig Brewer",
+    "writer": "Scott Alexander, Larry Karaszewski",
+    "actors": [
+      {
+        "id": 26,
+        "name": "Eddie Murphy",
+        "gender": "M",
+        "age": 61
+      },
+      {
+        "id": 27,
+        "name": "Keegan-Michael Key",
+        "gender": "M",
+        "age": 51
+      },
+      {
+        "id": 28,
+        "name": "Mike Epps",
+        "gender": "M",
+        "age": 52
+      },
+      {
+        "id": 29,
+        "name": "Craig Robinson",
+        "gender": "M",
+        "age": 51
+      }
+    ],
+    "plot": "Eddie Murphy portrays real-life legend Rudy Ray Moore, a comedy and rap pioneer who proved naysayers wrong when his hilarious, obscene, kung-fu fighting alter ego, Dolemite, became a 1970s Blaxploitation phenomenon.",
+    "language": "English",
+    "country": "USA",
+    "awards": "Nominated for 2 Golden Globes. Another 17 wins & 54 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzFiYWQxYzgtOThmYi00ZmIwLWFlZWMtMzk2NTI2YTYzMjkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "7.3/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "97%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "76/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Netflix"
+  },
+  {
+    "id": 9,
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "released": "14 Oct 1994",
+    "runtime": "142 min",
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "director": "Frank Darabont",
+    "writer": "Stephen King (novella), Frank Darabont (screenplay)",
+    "actors": [
+      {
+        "id": 30,
+        "name": "Tim Robbins",
+        "gender": "M",
+        "age": 64
+      },
+      {
+        "id": 31,
+        "name": "Morgan Freeman",
+        "gender": "M",
+        "age": 85
+      },
+      {
+        "id": 32,
+        "name": "Bob Gunton",
+        "gender": "M",
+        "age": 77
+      },
+      {
+        "id": 33,
+        "name": "William Sadler",
+        "gender": "M",
+        "age": 72
+      }
+    ],
+    "plot": "Two sentenced life prisoners in the Shawshank State Penitentiary become unlikely friends through a series of events and share their hopes for freedom.",
+    "language": "English",
+    "country": "USA",
+    "awards": "Won 7 Oscars. Another 24 wins & 49 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEyZmNhNjAyMjQzNzk3ZTgwYmEzNWUyMTc0NWRvMjQzNWZhMjliZGVjYWccMGU3NDhkN2QyNzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "9.3/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "99%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "88/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Castle Rock Entertainment"
+  },
+  {
+    "id": 10,
+    "title": "Once Upon a Time... in Hollywood",
+    "year": 2019,
+    "released": "2019-07-26",
+    "runtime": "161 min",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "director": "Quentin Tarantino",
+    "writer": "Quentin Tarantino",
+    "actors": "Leonardo DiCaprio, Brad Pitt, Margot Robbie, Emile Hirsch",
+    "plot": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+    "language": [
+      "English",
+      "Italian",
+      "Spanish"
+    ],
+    "country": [
+      "USA",
+      "UK",
+      "China"
+    ],
+    "awards": "Won 3 Golden Globes. Another 70 wins & 242 nominations.",
+    "poster": "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg",
+    "ratings": [
+      {
+        "source": "Internet Movie Database",
+        "value": "7.8/10"
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "value": "85%"
+      },
+      {
+        "source": "Metacritic",
+        "value": "83/100"
+      }
+    ],
+    "type": "movie",
+    "production": "Columbia Pictures"
+  }
+]
