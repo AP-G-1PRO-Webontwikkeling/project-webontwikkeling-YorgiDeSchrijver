@@ -5,17 +5,17 @@ export interface Movie {
   id: number;
   title: string;
   year: number;
-  released: Date;
+  released: string;
   genre: string[];
   director: string;
   writer: string;
-  actors: Actor[];
+  actors: string | Actor[];
   plot: string;
-  language: string;
-  country: string;
+  language: string | string[];
+  country: string | string[];
   awards: string;
   poster: string;
-  ratings: Rating[];
+  ratings: Rating[]
   type: string;
   production: string;
 }
