@@ -1,3 +1,19 @@
+import express from "express";
+
+const app = express();
+
+app.set("port", 3000);
+
+
+
+
+app.listen(app.get("port"), () => {
+  console.log( "[server] http://localhost:" + app.get("port"));
+});
+
+
+// Move to another file!!!
+
 import data from "./movies.json";
 import { Movie } from "./interfaces/movie";
 import * as readline from "readline-sync";
