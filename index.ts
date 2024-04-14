@@ -1,6 +1,23 @@
 import express from "express";
+import livereload from "livereload";
+import connectLiveReload from "connect-livereload";
+import path from "path";
+import movieData from "./movies.json";
+import actorData from "./actors.json";
+import { Movie } from "./interfaces/movie";
+import { Actor } from "./interfaces/actor";
+
+const liveReloadServer = livereload.createServer();
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+});
+
 
 const app = express();
+
+app.use(connectLiveReload());
 
 app.set("view engine", "ejs");
 app.set("port", 3000);
@@ -10,14 +27,50 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.render("index");
+  const movies: Movie[] = movieData;
+  res.render("index", {
+    movies: movies
+  });
 });
+
+app.get("/movies", (req, res) => {
+  const movies: Movie[] = movieData;
+  res.render("index", {
+    movies: movies
+  });
+});
+
+app.get("/actors", (req, res) => {
+  const actors: Actor[] = actorData;
+  res.render("actors", {
+    actors: actors
+  });
+});
+
+app.get("/movie/:id", (req, res) => {
+  const movies: Movie[] = movieData;
+  res.render("index", {
+    movies: movies
+  });
+});
+
+app.get("/actor/:id", (req, res) => {
+  const movies: Movie[] = movieData;
+  res.render("index", {
+    movies: movies
+  });
+});
+
+
+
+
 
 
 app.listen(app.get("port"), () => {
   console.log( "[server] http://localhost:" + app.get("port"));
 });
 
+module.exports = app;
 
 // Move to another file!!!
 

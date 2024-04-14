@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "nodemon -L index.ts",
     "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/connect-livereload": "^0.6.3",
     "@types/ejs": "^3.1.5",
     "@types/express": "^4.17.21",
+    "@types/livereload": "^0.9.5",
     "@types/node": "^20.11.20",
     "@types/readline-sync": "^1.4.8",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
     "nodemon": "^3.1.0"
   },
   "dependencies": {
