@@ -6,7 +6,7 @@ import movieData from "./movies.json";
 import actorData from "./actors.json";
 import { Movie } from "./app/interfaces/movie";
 import { Actor } from "./app/interfaces/actor";
-import { connect } from "./database";
+import { connect, getActors, getMovies } from "./database";
 import "dotenv/config";
 
 const liveReloadServer = livereload.createServer();
@@ -29,39 +29,39 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  const movies: Movie[] = movieData;
+  const movies: Movie[] = []
   res.render("index", {
     movies: movies
   });
 });
 
-app.get("/movies", (req, res) => {
-  const movies: Movie[] = movieData;
+app.get("/movies", async (req, res) => {
+  const movies: Movie[] = await getMovies();
   res.render("index", {
     movies: movies
   });
 });
 
-app.get("/actors", (req, res) => {
-  const actors: Actor[] = actorData;
+app.get("/actors", async (req, res) => {
+  const actors: Actor[] = await getActors();
   res.render("actors", {
     actors: actors
   });
 });
 
-app.get("/movie/:id", (req, res) => {
-  const movies: Movie[] = movieData;
-  res.render("index", {
-    movies: movies
-  });
-});
+// app.get("/movie/:id", (req, res) => {
+//   const movies = null;
+//   res.render("index", {
+//     movies: movies
+//   });
+// });
 
-app.get("/actor/:id", (req, res) => {
-  const movies: Movie[] = movieData;
-  res.render("index", {
-    movies: movies
-  });
-});
+// app.get("/actor/:id", (req, res) => {
+//   const movies: Movie[] = movieData;
+//   res.render("index", {
+//     movies: movies
+//   });
+// });
 
 
 

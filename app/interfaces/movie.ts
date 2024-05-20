@@ -2,15 +2,15 @@ import { Actor } from "./actor";
 import { Rating } from "./rating";
 
 export interface Movie {
-  id: number;
+  id: string;
   title: string;
-  year: number;
+  year: string;
   released: string;
   runtime: string;
   genre: string[];
   director: string;
   writer: string;
-  actors: string | Actor[];
+  actors: string | string[];
   plot: string;
   language: string | string[];
   country: string | string[];

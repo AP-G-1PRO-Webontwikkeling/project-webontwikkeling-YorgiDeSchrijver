@@ -1,6 +1,6 @@
 export interface Actor {
-  id: number;
+  id: string;
   name: string;
   gender: string;
-  age: number;
+  age: string;
 }
