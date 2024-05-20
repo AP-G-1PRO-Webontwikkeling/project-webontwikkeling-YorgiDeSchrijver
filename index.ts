@@ -6,8 +6,9 @@ import movieData from "./movies.json";
 import actorData from "./actors.json";
 import { Movie } from "./app/interfaces/movie";
 import { Actor } from "./app/interfaces/actor";
-import { connect, getActors, getMovies } from "./database";
+import { connect, getActors, getMovieByTitle, getMovies } from "./database";
 import "dotenv/config";
+import { WithId } from "mongodb";
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
@@ -41,6 +42,21 @@ app.get("/movies", async (req, res) => {
     movies: movies
   });
 });
+
+app.get("/movies/:title", async (req, res) => {
+  let title = req.params.title;
+  const movie: WithId<Movie> | null = await getMovieByTitle(title);
+  if (movie === null) {
+    // Handle the case where no movie is found
+    res.status(404).send('Movie not found');
+  } else {
+    res.render("movie", {
+      movie: movie
+    });
+  }
+});
+
+
 
 app.get("/movies/new", async (req, res) => {
   res.render("newMovie");

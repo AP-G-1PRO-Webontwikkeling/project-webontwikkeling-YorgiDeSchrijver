@@ -22,6 +22,10 @@ export async function getMovies() {
     return await moviesCollection.find().toArray();
 } 
 
+export async function getMovieByTitle(title: string) {
+    return await moviesCollection.findOne({ title: title });
+}
+
 export async function getActors() {
     return await actorsCollection.find().toArray();
 }

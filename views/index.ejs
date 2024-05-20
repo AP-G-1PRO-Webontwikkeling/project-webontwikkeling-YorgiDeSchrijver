@@ -90,7 +90,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-800 dark:divide-neutral-700">
                       <% movies.forEach(movie=> { %>
-                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer" data-href="/movie/<%= movie.id %>">
+                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer" data-href="/movies/<%= movie.title %>">
                           <td class="p-4 text-base font-semibold text-neutral-900 whitespace-nowrap dark:text-white">
                             <%= movie.title %>
                           </td>
@@ -125,3 +125,9 @@
       </div>
   </div>
   <%- include("partials/footer") %>
+
+  <script>
+    document.querySelectorAll('tr[data-href]').forEach(elem => {
+      elem.addEventListener('click', () => window.location.href = elem.dataset.href);
+    });
+  </script>
