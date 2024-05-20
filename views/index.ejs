@@ -5,7 +5,7 @@
         <%- include("partials/header") %>
           <main class="m-3">
             <div
-              class="p-4 bg-white block sm:flex items-center justify-between border-b border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
+              class="p-4 bg-white block sm:flex items-start justify-between dark:bg-neutral-800 dark:border-neutral-700">
               <div class="w-full mb-1">
                 <div class="mb-4">
                   <nav class="flex mb-5" aria-label="Breadcrumb">
@@ -52,8 +52,11 @@
                   </div>
                 </div>
               </div>
+              <a href="movies/new"><button class="bg-neutral-800 hover:bg-neutral-700 text-white font-bold py-3 px-6 rounded-lg text-nowrap w-auto">
+                Film toevoegen
+              </button></a>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col px-4">
               <div class="inline-block min-w-full align-middle rounded-lg">
                 <div class="overflow-scroll shadow">
                   <table class="min-w-full divide-y divide-neutral-200 table-fixed dark:divide-neutral-600 ">

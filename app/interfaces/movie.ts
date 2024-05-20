@@ -10,10 +10,10 @@ export interface Movie {
   genre: string[];
   director: string;
   writer: string;
-  actors: string | string[];
+  actors: string[];
   plot: string;
-  language: string | string[];
-  country: string | string[];
+  language: string[];
+  country: string[];
   awards: string;
   poster: string;
   ratings: Rating[]

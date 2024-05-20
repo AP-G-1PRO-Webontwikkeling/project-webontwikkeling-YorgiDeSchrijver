@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "They Shall Not Grow Old",
     "year": 2018,
     "released": "2019-02-01",
@@ -14,13 +13,11 @@
     "writer": "Peter Jackson",
     "actors": [
       {
-        "id": 1,
         "name": "Mark Kermode",
         "gender": "M",
         "age": 60
       },
       {
-        "id": 2,
         "name": "Peter Jackson",
         "gender": "M",
         "age": 61
@@ -49,7 +46,6 @@
     "production": "Warner Bros. Pictures"
   },
   {
-    "id": 2,
     "title": "Midnight Family",
     "year": 2019,
     "released": "2019-12-06",
@@ -64,19 +60,16 @@
     "writer": "Luke Lorentzen",
     "actors": [
       {
-        "id": 3,
         "name": "Fer Ochoa",
         "gender": "M",
         "age": 35
       },
       {
-        "id": 4,
         "name": "Josue Ochoa",
         "gender": "M",
         "age": 38
       },
       {
-        "id": 5,
         "name": "Juan Ochoa",
         "gender": "M",
         "age": 30
@@ -105,7 +98,6 @@
     "production": "1091"
   },
   {
-    "id": 3,
     "title": "Pain & Gain",
     "year": 2013,
     "released": "2013-04-26",
@@ -120,25 +112,21 @@
     "writer": "Christopher Markus (screenplay), Stephen McFeely (screenplay), Pete Collins (based on the magazine articles by)",
     "actors": [
       {
-        "id": 6,
         "name": "Mark Wahlberg",
         "gender": "M",
         "age": 51
       },
       {
-        "id": 7,
         "name": "Dwayne Johnson",
         "gender": "M",
         "age": 50
       },
       {
-        "id": 8,
         "name": "Anthony Mackie",
         "gender": "M",
         "age": 44
       },
       {
-        "id": 9,
         "name": "Tony Shalhoub",
         "gender": "M",
         "age": 69
@@ -167,7 +155,6 @@
     "production": "Paramount Studios"
   },
   {
-    "id": 4,
     "title": "Marriage Story",
     "year": 2019,
     "released": "2019-12-06",
@@ -181,25 +168,21 @@
     "writer": "Noah Baumbach",
     "actors": [
       {
-        "id": 10,
         "name": "Adam Driver",
         "gender": "M",
         "age": 39
       },
       {
-        "id": 11,
         "name": "Scarlett Johansson",
         "gender": "F",
         "age": 38
       },
       {
-        "id": 12,
         "name": "Julia Greer",
         "gender": "F",
         "age": 48
       },
       {
-        "id": 13,
         "name": "Azhy Robertson",
         "gender": "M",
         "age": 13
@@ -231,7 +214,6 @@
     "production": "Netflix"
   },
   {
-    "id": 5,
     "title": "Little Women",
     "year": 1994,
     "released": "1994-12-25",
@@ -245,25 +227,21 @@
     "writer": "Louisa May Alcott (novel), Robin Swicord (screenplay)",
     "actors": [
       {
-        "id": 14,
         "name": "Winona Ryder",
         "gender": "F",
         "age": 51
       },
       {
-        "id": 15,
         "name": "Gabriel Byrne",
         "gender": "M",
         "age": 72
       },
       {
-        "id": 16,
         "name": "Trini Alvarado",
         "gender": "F",
         "age": 56
       },
       {
-        "id": 17,
         "name": "Samantha Mathis",
         "gender": "F",
         "age": 52
@@ -295,7 +273,6 @@
     "production": "N/A"
   },
   {
-    "id": 6,
     "title": "Parasite",
     "year": 2019,
     "released": "2019-11-08",
@@ -309,25 +286,21 @@
     "writer": "Bong Joon Ho (story), Bong Joon Ho (screenplay), Bong Joon Ho (story by), Jin Won Han (screenplay)",
     "actors": [
       {
-        "id": 18,
         "name": "Kang-ho Song",
         "gender": "M",
         "age": 56
       },
       {
-        "id": 19,
         "name": "Sun-kyun Lee",
         "gender": "M",
         "age": 48
       },
       {
-        "id": 20,
         "name": "Yeo-jeong Joo",
         "gender": "F",
         "age": 61
       },
       {
-        "id": 21,
         "name": "Woo-sik Choi",
         "gender": "M",
         "age": 37
@@ -359,7 +332,6 @@
     "production": "NEON"
   },
   {
-    "id": 7,
     "title": "Knives Out",
     "year": 2019,
     "released": "2019-11-27",
@@ -375,25 +347,21 @@
     "writer": "Rian Johnson",
     "actors": [
       {
-        "id": 22,
         "name": "Daniel Craig",
         "gender": "M",
         "age": 54
       },
       {
-        "id": 23,
         "name": "Chris Evans",
         "gender": "M",
         "age": 41
       },
       {
-        "id": 24,
         "name": "Ana de Armas",
         "gender": "F",
         "age": 34
       },
       {
-        "id": 25,
         "name": "Jamie Lee Curtis",
         "gender": "F",
         "age": 64
@@ -425,7 +393,6 @@
     "production": "Lionsgate"
   },
   {
-    "id": 8,
     "title": "Dolemite Is My Name",
     "year": 2019,
     "released": "2019-10-25",
@@ -439,25 +406,21 @@
     "writer": "Scott Alexander, Larry Karaszewski",
     "actors": [
       {
-        "id": 26,
         "name": "Eddie Murphy",
         "gender": "M",
         "age": 61
       },
       {
-        "id": 27,
         "name": "Keegan-Michael Key",
         "gender": "M",
         "age": 51
       },
       {
-        "id": 28,
         "name": "Mike Epps",
         "gender": "M",
         "age": 52
       },
       {
-        "id": 29,
         "name": "Craig Robinson",
         "gender": "M",
         "age": 51
@@ -486,7 +449,6 @@
     "production": "Netflix"
   },
   {
-    "id": 9,
     "title": "The Shawshank Redemption",
     "year": 1994,
     "released": "14 Oct 1994",
@@ -499,25 +461,21 @@
     "writer": "Stephen King (novella), Frank Darabont (screenplay)",
     "actors": [
       {
-        "id": 30,
         "name": "Tim Robbins",
         "gender": "M",
         "age": 64
       },
       {
-        "id": 31,
         "name": "Morgan Freeman",
         "gender": "M",
         "age": 85
       },
       {
-        "id": 32,
         "name": "Bob Gunton",
         "gender": "M",
         "age": 77
       },
       {
-        "id": 33,
         "name": "William Sadler",
         "gender": "M",
         "age": 72
@@ -546,7 +504,6 @@
     "production": "Castle Rock Entertainment"
   },
   {
-    "id": 10,
     "title": "Once Upon a Time... in Hollywood",
     "year": 2019,
     "released": "2019-07-26",
@@ -559,19 +516,16 @@
     "writer": "Quentin Tarantino",
     "actors": [
       {
-        "id": 35,
         "name": "Brad Pitt",
         "gender": "M",
         "age": 60
       },
       {
-        "id": 33,
         "name": "Margot Robbie",
         "gender": "F",
         "age": 33
       },
       {
-        "id": 33,
         "name": "Emile Hirsch",
         "gender": "F",
         "age": 38

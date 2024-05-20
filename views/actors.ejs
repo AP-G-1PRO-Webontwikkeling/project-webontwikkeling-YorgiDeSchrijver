@@ -53,7 +53,7 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col px-4">
               <div class="inline-block min-w-full align-middle rounded-lg">
                 <div class="overflow-scroll shadow">
                   <table class="min-w-full divide-y divide-neutral-200 table-fixed dark:divide-neutral-600 ">
@@ -75,7 +75,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-800 dark:divide-neutral-700">
                       <% actors.forEach(actor=> { %>
-                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer" data-href="/movie/1" >
+                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer" data-href="/movie/1">
                           <a href="/movie/1">
                             <td class="p-4 text-base font-semibold text-neutral-900 whitespace-nowrap dark:text-white">
                               <%= actor.name %>
@@ -107,15 +107,15 @@
   </div>
   <%- include("partials/footer") %>
 
-  <script>
-    const tableRows = document.querySelectorAll('.table tbody tr'); // Select all rows within the table body
-    
-    tableRows.forEach(row => {
-      row.addEventListener('click', () => {
-        const href = row.dataset.href; // Get the URL from data-href attribute
-        if (href) {
-          window.location.href = href; // Redirect to the stored URL
-        }
+    <script>
+      const tableRows = document.querySelectorAll('.table tbody tr'); // Select all rows within the table body
+
+      tableRows.forEach(row => {
+        row.addEventListener('click', () => {
+          const href = row.dataset.href; // Get the URL from data-href attribute
+          if (href) {
+            window.location.href = href; // Redirect to the stored URL
+          }
+        });
       });
-    });
     </script>

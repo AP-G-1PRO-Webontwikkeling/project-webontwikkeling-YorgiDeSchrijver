@@ -42,11 +42,19 @@ app.get("/movies", async (req, res) => {
   });
 });
 
+app.get("/movies/new", async (req, res) => {
+  res.render("newMovie");
+});
+
 app.get("/actors", async (req, res) => {
   const actors: Actor[] = await getActors();
   res.render("actors", {
     actors: actors
   });
+});
+
+app.get("/actors/new", async (req, res) => {
+  res.render("newActor");
 });
 
 // app.get("/movie/:id", (req, res) => {
