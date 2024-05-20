@@ -4,8 +4,10 @@ import connectLiveReload from "connect-livereload";
 import path from "path";
 import movieData from "./movies.json";
 import actorData from "./actors.json";
-import { Movie } from "./interfaces/movie";
-import { Actor } from "./interfaces/actor";
+import { Movie } from "./app/interfaces/movie";
+import { Actor } from "./app/interfaces/actor";
+import { connect } from "./database";
+import "dotenv/config";
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
@@ -66,7 +68,8 @@ app.get("/actor/:id", (req, res) => {
 
 
 
-app.listen(app.get("port"), () => {
+app.listen(app.get("port"), async () => {
+  await connect();
   console.log( "[server] http://localhost:" + app.get("port"));
 });
 
