@@ -43,6 +43,10 @@ app.get("/movies", async (req, res) => {
   });
 });
 
+app.get("/movies/new", async (req, res) => {
+  res.render("newMovie");
+});
+
 app.get("/movies/:title", async (req, res) => {
   let title = req.params.title;
   const movie: WithId<Movie> | null = await getMovieByTitle(title);
@@ -58,9 +62,7 @@ app.get("/movies/:title", async (req, res) => {
 
 
 
-app.get("/movies/new", async (req, res) => {
-  res.render("newMovie");
-});
+
 
 app.get("/actors", async (req, res) => {
   const actors: Actor[] = await getActors();

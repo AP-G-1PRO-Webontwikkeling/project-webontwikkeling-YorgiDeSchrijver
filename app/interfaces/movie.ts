@@ -2,7 +2,6 @@ import { Actor } from "./actor";
 import { Rating } from "./rating";
 
 export interface Movie {
-  id: string;
   title: string;
   year: string;
   released: string;
@@ -10,7 +9,7 @@ export interface Movie {
   genre: string[];
   director: string;
   writer: string;
-  actors: string[];
+  actors: Actor[];
   plot: string;
   language: string[];
   country: string[];
