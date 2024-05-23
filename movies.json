@@ -15,12 +15,14 @@
       {
         "name": "Mark Kermode",
         "gender": "M",
-        "age": 60
+        "age": 60,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Film_Critic_Mark_Kermode.jpg"
       },
       {
         "name": "Peter Jackson",
         "gender": "M",
-        "age": 61
+        "age": 61,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Peter_Jackson_SDCC_2014.jpg/800px-Peter_Jackson_SDCC_2014.jpg"
       }
     ],
     "plot": "A documentary about World War I with never-before-seen footage to commemorate the centennial of the end of the war.",
@@ -62,17 +64,20 @@
       {
         "name": "Fer Ochoa",
         "gender": "M",
-        "age": 35
+        "age": 35,
+        "image": ""
       },
       {
         "name": "Josue Ochoa",
         "gender": "M",
-        "age": 38
+        "age": 38,
+        "image": ""
       },
       {
         "name": "Juan Ochoa",
         "gender": "M",
-        "age": 30
+        "age": 30,
+        "image": ""
       }
     ],
     "plot": "In Mexico City's wealthiest neighborhoods, the Ochoa family runs a private ambulance, competing with other for-profit EMTs for patients in need of urgent help.",
@@ -114,22 +119,26 @@
       {
         "name": "Mark Wahlberg",
         "gender": "M",
-        "age": 51
+        "age": 51,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mark_Wahlberg_2021.jpg/800px-Mark_Wahlberg_2021.jpg"
       },
       {
         "name": "Dwayne Johnson",
         "gender": "M",
-        "age": 50
+        "age": 50,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg/800px-Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg"
       },
       {
         "name": "Anthony Mackie",
         "gender": "M",
-        "age": 44
+        "age": 44,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Anthony_Mackie_by_Gage_Skidmore_2.jpg/800px-Anthony_Mackie_by_Gage_Skidmore_2.jpg"
       },
       {
         "name": "Tony Shalhoub",
         "gender": "M",
-        "age": 69
+        "age": 69,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tony_Shalhoub_2017_%28cropped%29.jpg/330px-Tony_Shalhoub_2017_%28cropped%29.jpg"
       }
     ],
     "plot": "A trio of bodybuilders in Florida get caught up in an extortion ring and a kidnapping scheme that goes terribly wrong.",
@@ -170,22 +179,26 @@
       {
         "name": "Adam Driver",
         "gender": "M",
-        "age": 39
+        "age": 39,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/800px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg"
       },
       {
         "name": "Scarlett Johansson",
         "gender": "F",
-        "age": 38
+        "age": 38,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Scarlett_Johansson_by_Gage_Skidmore_2019.jpg"
       },
       {
         "name": "Julia Greer",
         "gender": "F",
-        "age": 48
+        "age": 48,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Julia_Greer.jpg/800px-Julia_Greer.jpg"
       },
       {
         "name": "Azhy Robertson",
         "gender": "M",
-        "age": 13
+        "age": 13,
+        "image": "https://static.wikia.nocookie.net/invasion/images/5/51/Azhy_Robertson.jpg/revision/latest?cb=20211025155738"
       }
     ],
     "plot": "Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.",
@@ -229,22 +242,26 @@
       {
         "name": "Winona Ryder",
         "gender": "F",
-        "age": 51
+        "age": 51,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Winona_Ryder_2010_TIFF.jpg/800px-Winona_Ryder_2010_TIFF.jpg"
       },
       {
         "name": "Gabriel Byrne",
         "gender": "M",
-        "age": 72
+        "age": 72,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Gabriel_Byrne_2010.jpg/330px-Gabriel_Byrne_2010.jpg"
       },
       {
         "name": "Trini Alvarado",
         "gender": "F",
-        "age": 56
+        "age": 56,
+        "image": "https://resizing.flixster.com/rJ1Cbq1GPd8N4BMHUiKs96qnluU=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/77487_v9_bb.jpg"
       },
       {
         "name": "Samantha Mathis",
         "gender": "F",
-        "age": 52
+        "age": 52,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Samantha_Mathis_Photo_Op_Nightmare_Weekend_Richmond_2023.jpg/800px-Samantha_Mathis_Photo_Op_Nightmare_Weekend_Richmond_2023.jpg"
       }
     ],
     "plot": "The March sisters live and grow in post-Civil War America.",

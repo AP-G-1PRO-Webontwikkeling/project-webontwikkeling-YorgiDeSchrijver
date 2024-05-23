@@ -14,9 +14,8 @@ const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
-  }, 100);
+  }, 10);
 });
-
 
 const app = express();
 
@@ -32,14 +31,16 @@ app.use(express.json());
 app.get("/", (req, res) => {
   const movies: Movie[] = []
   res.render("index", {
-    movies: movies
+    movies: movies,
+    activePage: 'home'
   });
 });
 
 app.get("/movies", async (req, res) => {
   const movies: Movie[] = await getMovies();
   res.render("index", {
-    movies: movies
+    movies: movies,
+    activePage: 'movies'
   });
 });
 
@@ -67,7 +68,8 @@ app.get("/movies/:title", async (req, res) => {
 app.get("/actors", async (req, res) => {
   const actors: Actor[] = await getActors();
   res.render("actors", {
-    actors: actors
+    actors: actors,
+    activePage: 'actors'
   });
 });
 

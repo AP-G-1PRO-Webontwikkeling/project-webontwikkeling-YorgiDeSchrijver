@@ -46,6 +46,8 @@ export async function seed(){
         const data = fs.readFileSync(path.resolve(__dirname, 'movies.json'), 'utf-8');
         const movies = JSON.parse(data);
         const db = client.db("WebDevProject");
+        db.collection('Movies').deleteMany();
+        db.collection('Actors').deleteMany();
         for (const movie of movies) {
             const actorIds = await Promise.all(movie.actors.map(async (actor: OptionalId<Document>) => {
                 const actorId = await db.collection('Actors').findOne({ name: actor.name });
