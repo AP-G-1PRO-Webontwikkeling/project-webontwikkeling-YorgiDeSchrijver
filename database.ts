@@ -18,18 +18,6 @@ async function exit() {
     process.exit(0);
 }
 
-export async function getMovies() {
-    return await moviesCollection.find().toArray();
-} 
-
-export async function getMovieByTitle(title: string) {
-    return await moviesCollection.findOne({ title: title });
-}
-
-export async function getActors() {
-    return await actorsCollection.find().toArray();
-}
-
 export async function connect() {
     try {
         await client.connect();
@@ -67,4 +55,16 @@ export async function seed(){
     } catch (error) {
         console.error(error);
     }
+}
+
+export async function getMovies() {
+    return await moviesCollection.find().toArray();
+} 
+
+export async function getMovieByTitle(title: string) {
+    return await moviesCollection.findOne({ title: title });
+}
+
+export async function getActors() {
+    return await actorsCollection.find().toArray();
 }

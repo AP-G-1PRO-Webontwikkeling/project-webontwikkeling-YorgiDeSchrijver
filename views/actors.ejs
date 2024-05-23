@@ -5,7 +5,7 @@
         <%- include("partials/header") %>
           <main class="m-3">
             <div
-              class="p-4 bg-white block sm:flex items-center justify-between border-b border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
+              class="p-4 bg-white block sm:flex items-center justify-between dark:bg-neutral-800 dark:border-neutral-700">
               <div class="w-full mb-1">
                 <div class="mb-4">
                   <nav class="flex mb-5" aria-label="Breadcrumb">
@@ -75,26 +75,25 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-neutral-200 dark:bg-neutral-800 dark:divide-neutral-700">
                       <% actors.forEach(actor=> { %>
-                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer" data-href="/movie/1">
-                          <a href="/movie/1">
-                            <td class="p-4 text-base font-semibold text-neutral-900 whitespace-nowrap dark:text-white">
-                              <%= actor.name %>
-                            </td>
-                            <td class="p-4 text-base font-semibold text-neutral-500 whitespace-nowrap dark:text-white">
-                              <% if (actor.gender=="F" ) { %>
-                                <div class="text-pink-500">
+                        <tr class="hover:bg-neutral-100 dark:hover:bg-neutral-700 cursor-pointer"
+                          data-href="/actors/<%= actor.name %>">
+                          <td class="p-4 text-base font-semibold text-neutral-900 whitespace-nowrap dark:text-white">
+                            <%= actor.name %>
+                          </td>
+                          <td class="p-4 text-base font-semibold text-neutral-500 whitespace-nowrap dark:text-white">
+                            <% if (actor.gender=="F" ) { %>
+                              <div class="text-pink-500">
+                                <%= actor.gender %>
+                              </div>
+                              <% } else { %>
+                                <div class="text-blue-500">
                                   <%= actor.gender %>
                                 </div>
-                                <% } else { %>
-                                  <div class="text-blue-500">
-                                    <%= actor.gender %>
-                                  </div>
-                                  <% } %>
-                            </td>
-                            <td class="p-4  text-base font-semibold text-neutral-600 whitespace-nowrap">
-                              <%= actor.age %>
-                            </td>
-                          </a>
+                                <% } %>
+                          </td>
+                          <td class="p-4  text-base font-semibold text-neutral-600 whitespace-nowrap">
+                            <%= actor.age %>
+                          </td>
                         </tr>
                         <% }) %>
                     </tbody>
@@ -108,14 +107,7 @@
   <%- include("partials/footer") %>
 
     <script>
-      const tableRows = document.querySelectorAll('.table tbody tr'); // Select all rows within the table body
-
-      tableRows.forEach(row => {
-        row.addEventListener('click', () => {
-          const href = row.dataset.href; // Get the URL from data-href attribute
-          if (href) {
-            window.location.href = href; // Redirect to the stored URL
-          }
-        });
+      document.querySelectorAll('tr[data-href]').forEach(elem => {
+        elem.addEventListener('click', () => window.location.href = elem.dataset.href);
       });
     </script>
