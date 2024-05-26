@@ -4,15 +4,38 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "test"
+    "start": "nodemon -L app.ts",
+    "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/connect-mongodb-session": "^2.4.7",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.18.0",
+    "@types/livereload": "^0.9.5",
     "@types/node": "^20.11.20",
-    "@types/readline-sync": "^1.4.8"
+    "@types/readline-sync": "^1.4.8",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "autoprefixer": "^10.4.19",
+    "bcrypt": "^5.1.1",
+    "connect-mongodb-session": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mongodb": "^6.6.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "readline-sync": "^1.4.10",
+    "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2"
   }
 }

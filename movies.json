@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "They Shall Not Grow Old",
     "year": 2018,
     "released": "2019-02-01",
@@ -14,16 +13,16 @@
     "writer": "Peter Jackson",
     "actors": [
       {
-        "id": 1,
         "name": "Mark Kermode",
         "gender": "M",
-        "age": 60
+        "age": 60,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Film_Critic_Mark_Kermode.jpg"
       },
       {
-        "id": 2,
         "name": "Peter Jackson",
         "gender": "M",
-        "age": 61
+        "age": 61,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Peter_Jackson_SDCC_2014.jpg/800px-Peter_Jackson_SDCC_2014.jpg"
       }
     ],
     "plot": "A documentary about World War I with never-before-seen footage to commemorate the centennial of the end of the war.",
@@ -49,7 +48,6 @@
     "production": "Warner Bros. Pictures"
   },
   {
-    "id": 2,
     "title": "Midnight Family",
     "year": 2019,
     "released": "2019-12-06",
@@ -64,22 +62,22 @@
     "writer": "Luke Lorentzen",
     "actors": [
       {
-        "id": 3,
         "name": "Fer Ochoa",
         "gender": "M",
-        "age": 35
+        "age": 35,
+        "image": ""
       },
       {
-        "id": 4,
         "name": "Josue Ochoa",
         "gender": "M",
-        "age": 38
+        "age": 38,
+        "image": ""
       },
       {
-        "id": 5,
         "name": "Juan Ochoa",
         "gender": "M",
-        "age": 30
+        "age": 30,
+        "image": ""
       }
     ],
     "plot": "In Mexico City's wealthiest neighborhoods, the Ochoa family runs a private ambulance, competing with other for-profit EMTs for patients in need of urgent help.",
@@ -105,7 +103,6 @@
     "production": "1091"
   },
   {
-    "id": 3,
     "title": "Pain & Gain",
     "year": 2013,
     "released": "2013-04-26",
@@ -120,28 +117,28 @@
     "writer": "Christopher Markus (screenplay), Stephen McFeely (screenplay), Pete Collins (based on the magazine articles by)",
     "actors": [
       {
-        "id": 6,
         "name": "Mark Wahlberg",
         "gender": "M",
-        "age": 51
+        "age": 51,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mark_Wahlberg_2021.jpg/800px-Mark_Wahlberg_2021.jpg"
       },
       {
-        "id": 7,
         "name": "Dwayne Johnson",
         "gender": "M",
-        "age": 50
+        "age": 50,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg/800px-Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg"
       },
       {
-        "id": 8,
         "name": "Anthony Mackie",
         "gender": "M",
-        "age": 44
+        "age": 44,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Anthony_Mackie_by_Gage_Skidmore_2.jpg/800px-Anthony_Mackie_by_Gage_Skidmore_2.jpg"
       },
       {
-        "id": 9,
         "name": "Tony Shalhoub",
         "gender": "M",
-        "age": 69
+        "age": 69,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Tony_Shalhoub_2017_%28cropped%29.jpg/330px-Tony_Shalhoub_2017_%28cropped%29.jpg"
       }
     ],
     "plot": "A trio of bodybuilders in Florida get caught up in an extortion ring and a kidnapping scheme that goes terribly wrong.",
@@ -167,7 +164,6 @@
     "production": "Paramount Studios"
   },
   {
-    "id": 4,
     "title": "Marriage Story",
     "year": 2019,
     "released": "2019-12-06",
@@ -181,28 +177,28 @@
     "writer": "Noah Baumbach",
     "actors": [
       {
-        "id": 10,
         "name": "Adam Driver",
         "gender": "M",
-        "age": 39
+        "age": 39,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/800px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg"
       },
       {
-        "id": 11,
         "name": "Scarlett Johansson",
         "gender": "F",
-        "age": 38
+        "age": 38,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Scarlett_Johansson_by_Gage_Skidmore_2019.jpg"
       },
       {
-        "id": 12,
         "name": "Julia Greer",
         "gender": "F",
-        "age": 48
+        "age": 48,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Julia_Greer.jpg/800px-Julia_Greer.jpg"
       },
       {
-        "id": 13,
         "name": "Azhy Robertson",
         "gender": "M",
-        "age": 13
+        "age": 13,
+        "image": "https://static.wikia.nocookie.net/invasion/images/5/51/Azhy_Robertson.jpg/revision/latest?cb=20211025155738"
       }
     ],
     "plot": "Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.",
@@ -231,7 +227,6 @@
     "production": "Netflix"
   },
   {
-    "id": 5,
     "title": "Little Women",
     "year": 1994,
     "released": "1994-12-25",
@@ -245,28 +240,28 @@
     "writer": "Louisa May Alcott (novel), Robin Swicord (screenplay)",
     "actors": [
       {
-        "id": 14,
         "name": "Winona Ryder",
         "gender": "F",
-        "age": 51
+        "age": 51,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Winona_Ryder_2010_TIFF.jpg/800px-Winona_Ryder_2010_TIFF.jpg"
       },
       {
-        "id": 15,
         "name": "Gabriel Byrne",
         "gender": "M",
-        "age": 72
+        "age": 72,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Gabriel_Byrne_2010.jpg/330px-Gabriel_Byrne_2010.jpg"
       },
       {
-        "id": 16,
         "name": "Trini Alvarado",
         "gender": "F",
-        "age": 56
+        "age": 56,
+        "image": "https://resizing.flixster.com/rJ1Cbq1GPd8N4BMHUiKs96qnluU=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/77487_v9_bb.jpg"
       },
       {
-        "id": 17,
         "name": "Samantha Mathis",
         "gender": "F",
-        "age": 52
+        "age": 52,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Samantha_Mathis_Photo_Op_Nightmare_Weekend_Richmond_2023.jpg/800px-Samantha_Mathis_Photo_Op_Nightmare_Weekend_Richmond_2023.jpg"
       }
     ],
     "plot": "The March sisters live and grow in post-Civil War America.",
@@ -295,7 +290,6 @@
     "production": "N/A"
   },
   {
-    "id": 6,
     "title": "Parasite",
     "year": 2019,
     "released": "2019-11-08",
@@ -309,25 +303,21 @@
     "writer": "Bong Joon Ho (story), Bong Joon Ho (screenplay), Bong Joon Ho (story by), Jin Won Han (screenplay)",
     "actors": [
       {
-        "id": 18,
         "name": "Kang-ho Song",
         "gender": "M",
         "age": 56
       },
       {
-        "id": 19,
         "name": "Sun-kyun Lee",
         "gender": "M",
         "age": 48
       },
       {
-        "id": 20,
         "name": "Yeo-jeong Joo",
         "gender": "F",
         "age": 61
       },
       {
-        "id": 21,
         "name": "Woo-sik Choi",
         "gender": "M",
         "age": 37
@@ -359,7 +349,6 @@
     "production": "NEON"
   },
   {
-    "id": 7,
     "title": "Knives Out",
     "year": 2019,
     "released": "2019-11-27",
@@ -375,25 +364,21 @@
     "writer": "Rian Johnson",
     "actors": [
       {
-        "id": 22,
         "name": "Daniel Craig",
         "gender": "M",
         "age": 54
       },
       {
-        "id": 23,
         "name": "Chris Evans",
         "gender": "M",
         "age": 41
       },
       {
-        "id": 24,
         "name": "Ana de Armas",
         "gender": "F",
         "age": 34
       },
       {
-        "id": 25,
         "name": "Jamie Lee Curtis",
         "gender": "F",
         "age": 64
@@ -425,7 +410,6 @@
     "production": "Lionsgate"
   },
   {
-    "id": 8,
     "title": "Dolemite Is My Name",
     "year": 2019,
     "released": "2019-10-25",
@@ -439,25 +423,21 @@
     "writer": "Scott Alexander, Larry Karaszewski",
     "actors": [
       {
-        "id": 26,
         "name": "Eddie Murphy",
         "gender": "M",
         "age": 61
       },
       {
-        "id": 27,
         "name": "Keegan-Michael Key",
         "gender": "M",
         "age": 51
       },
       {
-        "id": 28,
         "name": "Mike Epps",
         "gender": "M",
         "age": 52
       },
       {
-        "id": 29,
         "name": "Craig Robinson",
         "gender": "M",
         "age": 51
@@ -486,10 +466,9 @@
     "production": "Netflix"
   },
   {
-    "id": 9,
     "title": "The Shawshank Redemption",
     "year": 1994,
-    "released": "14 Oct 1994",
+    "released": "1994-10-14",
     "runtime": "142 min",
     "genre": [
       "Crime",
@@ -499,25 +478,21 @@
     "writer": "Stephen King (novella), Frank Darabont (screenplay)",
     "actors": [
       {
-        "id": 30,
         "name": "Tim Robbins",
         "gender": "M",
         "age": 64
       },
       {
-        "id": 31,
         "name": "Morgan Freeman",
         "gender": "M",
         "age": 85
       },
       {
-        "id": 32,
         "name": "Bob Gunton",
         "gender": "M",
         "age": 77
       },
       {
-        "id": 33,
         "name": "William Sadler",
         "gender": "M",
         "age": 72
@@ -546,7 +521,6 @@
     "production": "Castle Rock Entertainment"
   },
   {
-    "id": 10,
     "title": "Once Upon a Time... in Hollywood",
     "year": 2019,
     "released": "2019-07-26",
@@ -559,19 +533,16 @@
     "writer": "Quentin Tarantino",
     "actors": [
       {
-        "id": 35,
         "name": "Brad Pitt",
         "gender": "M",
         "age": 60
       },
       {
-        "id": 33,
         "name": "Margot Robbie",
         "gender": "F",
         "age": 33
       },
       {
-        "id": 33,
         "name": "Emile Hirsch",
         "gender": "F",
         "age": 38
