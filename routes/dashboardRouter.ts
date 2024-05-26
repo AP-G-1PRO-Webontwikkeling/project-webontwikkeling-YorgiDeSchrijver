@@ -1,14 +1,16 @@
 import { Router } from "express";
 import { Actor, Movie } from "../types";
-import { getActorById, getActors, getMovieByTitle, getMovies } from "../database";
+import { getActorById, getActorByName, getActors, getMovieByTitle, getMovies } from "../database";
 import { ObjectId, WithId } from "mongodb";
 
 export function DashboardRouter(){
   const router = Router();
 
   router.get("/", (req, res) => {
+    const username = req.session.user?.username;
     res.render("index", {
-      activePage: 'home'
+      activePage: 'home',
+      username: username
     });
 });
 
@@ -36,10 +38,6 @@ export function DashboardRouter(){
       sortField: sortField,
       search: search
     });
-  });
-  
-  router.get("/movies/new", async (req, res) => {
-    res.render("newMovie");
   });
   
   router.get("/movies/:title", async (req, res) => {
@@ -95,23 +93,18 @@ export function DashboardRouter(){
     });
   });
   
-  router.get("/actors/new", async (req, res) => {
-    res.render("newActor");
+  router.get("/actors/:name", async (req, res) => {
+    let name = req.params.name;
+    const actor: Actor | null = await getActorByName(name);
+    if (actor === null) {
+      res.status(404).send('Actor not found');
+    } else {
+      res.render("actor", {
+        actor: actor,
+        activePage: 'actors',
+      });
+    }
   });
-  
-  // router.get("/movie/:id", (req, res) => {
-  //   const movies = null;
-  //   res.render("index", {
-  //     movies: movies
-  //   });
-  // });
-  
-  // router.get("/actor/:id", (req, res) => {
-  //   const movies: Movie[] = movieData;
-  //   res.render("index", {
-  //     movies: movies
-  //   });
-  // });
-  
+
   return router;
 }

@@ -129,3 +129,7 @@ export async function getActors() {
 export async function getActorById(ObjectId: ObjectId) {
     return await actorsCollection.findOne({ _id: ObjectId });
 }
+
+export async function getActorByName(name: string) {
+    return await actorsCollection.findOne({ name: name });
+}
