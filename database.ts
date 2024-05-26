@@ -1,12 +1,15 @@
-import { Collection, Document, MongoClient, OptionalId } from "mongodb";
-import { Movie } from "./app/interfaces/movie";
-import { Actor } from "./app/interfaces/actor";
+import { Collection, Db, Document, MongoClient, ObjectId, OptionalId, WithId } from "mongodb";
 import fs from 'fs';
 import path from 'path';
+import bcrypt from "bcrypt";
+import { Actor, Movie, User } from "./types";
 
-export const client = new MongoClient("mongodb://localhost:27017");
-export const moviesCollection: Collection<Movie> = client.db("WebDevProject").collection<Movie>("Movies");
-export const actorsCollection: Collection<Actor> = client.db("WebDevProject").collection<Actor>("Actors");
+export const MONGODB_URI = process.env.MONGODB_URI ?? "mongodb://localhost:27017";
+
+export const client = new MongoClient(MONGODB_URI);
+export const moviesCollection: Collection<WithId<Movie>> = client.db("WebDevProject").collection<WithId<Movie>>("Movies");
+export const actorsCollection: Collection<WithId<Actor>> = client.db("WebDevProject").collection<WithId<Actor>>("Actors");
+export const usersCollection: Collection<WithId<User>> = client.db("WebDevProject").collection<WithId<User>>("Users");
 
 async function exit() {
     try {
@@ -34,8 +37,6 @@ export async function seed(){
         const data = fs.readFileSync(path.resolve(__dirname, 'movies.json'), 'utf-8');
         const movies = JSON.parse(data);
         const db = client.db("WebDevProject");
-        db.collection('Movies').deleteMany();
-        db.collection('Actors').deleteMany();
         for (const movie of movies) {
             const actorIds = await Promise.all(movie.actors.map(async (actor: OptionalId<Document>) => {
                 const actorId = await db.collection('Actors').findOne({ name: actor.name });
@@ -45,15 +46,55 @@ export async function seed(){
                 }
                 return actorId._id;
             }));
-            delete movie.actors;
-            movie.actorIds = actorIds;
-            if (await db.collection('Movies').findOne({ title: movie.title }) == null) {
-                await db.collection('Movies').insertOne(movie);
+            const movieDoc = {
+                ...movie,
+                actors: actorIds
             }
+            if (await db.collection('Movies').findOne({ title: movieDoc.title }) == null) {
+                await db.collection('Movies').insertOne(movieDoc);
+            }
+        }
+        if(await db.collection('Users').findOne({ email: 'admin@ap.be' }) == null){
+            await createUser('admin@ap.be', 'admin', 'ADMIN');
+        }
+        if(await db.collection('Users').findOne({ email: 'user@ap.be' }) == null){
+            await createUser('user@ap.be', 'user', 'USER');
         }
         console.log('Data seeded successfully');
     } catch (error) {
         console.error(error);
+    }
+}
+
+async function createUser(email: string, password: string, role: "ADMIN" | "USER"){
+    try {
+        const db = client.db("WebDevProject");
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = {
+            email: email,
+            password: hashedPassword,
+            role: role
+        }
+        return await db.collection('Users').insertOne(user);
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
+export async function login(email: string, password: string){
+    if (email === "" || password === "") {
+        throw new Error("Email and password required");
+    }
+    let user : User | null = await usersCollection.findOne<User>({email: email});
+    if (user) {
+        if (await bcrypt.compare(password, user.password!)) {
+            return user;
+        } else {
+            throw new Error("Password incorrect");
+        }
+    } else {
+        throw new Error("User not found");
     }
 }
 
@@ -67,4 +108,8 @@ export async function getMovieByTitle(title: string) {
 
 export async function getActors() {
     return await actorsCollection.find().toArray();
+}
+
+export async function getActorById(ObjectId: ObjectId) {
+    return await actorsCollection.findOne({ _id: ObjectId });
 }

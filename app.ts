@@ -1,14 +1,12 @@
 import express from "express";
 import livereload from "livereload";
 import connectLiveReload from "connect-livereload";
-import path from "path";
-import movieData from "./movies.json";
-import actorData from "./actors.json";
-import { Movie } from "./app/interfaces/movie";
-import { Actor } from "./app/interfaces/actor";
-import { connect, getActors, getMovieByTitle, getMovies } from "./database";
+import { connect, getActorById, getActors, getMovieByTitle, getMovies, login } from "./database";
 import "dotenv/config";
-import { WithId } from "mongodb";
+import { ObjectId, WithId } from "mongodb";
+import { Actor, Movie, User } from "./types";
+import session from "./session";
+import { secureMiddleware } from "./secureMiddleware";
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
@@ -20,6 +18,7 @@ liveReloadServer.server.once("connection", () => {
 const app = express();
 
 app.use(connectLiveReload());
+app.use(session);
 
 app.set("view engine", "ejs");
 app.set("port", 3000);
@@ -28,19 +27,61 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  const movies: Movie[] = []
-  res.render("index", {
-    movies: movies,
-    activePage: 'home'
-  });
+app.get("/", secureMiddleware, (req, res) => {
+    res.render("index", {
+      activePage: 'home'
+    });
 });
 
+app.get("/login", (req, res) => {
+  if(req.session.user){
+    res.redirect("/");
+  } else res.render("login");
+});
+
+app.post("/login", async(req, res) => {
+  const email : string = req.body.email;
+  const password : string = req.body.password;
+  try {
+    let user : User = await login(email, password);
+    user = { ...user, password: '' }; // Remove password from user object
+    req.session.user = user;
+    res.redirect("/")
+  } catch (e : any) {
+    res.redirect("/login");
+  }
+});
+
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login");
+});
+});
+
+
 app.get("/movies", async (req, res) => {
-  const movies: Movie[] = await getMovies();
-  res.render("index", {
+  const sortField = req.query.sortField ?? '';
+  const sortDirection = req.query.sortDirection ?? '';
+  const search = req.query.q ?? '';
+  let movies: Movie[] = await getMovies();
+  if(search){
+    const searchRegex = new RegExp(search as string, 'i');
+    movies = movies.filter(movie => {
+      return searchRegex.test(movie.title);
+    });
+  }
+  movies.sort((a, b) => {
+    let key = sortField as keyof Movie;
+      if (a[key] > b[key]) return sortDirection === 'asc' ? 1 : -1;
+      if (a[key] < b[key]) return sortDirection === 'asc' ? -1 : 1;
+    return 0;
+  });
+  res.render("movies", {
     movies: movies,
-    activePage: 'movies'
+    activePage: 'movies',
+    sortDirection: sortDirection,
+    sortField: sortField,
+    search: search
   });
 });
 
@@ -55,8 +96,18 @@ app.get("/movies/:title", async (req, res) => {
     // Handle the case where no movie is found
     res.status(404).send('Movie not found');
   } else {
+    const ids = movie.actors.map((actor: ObjectId) => {
+      return actor;
+    });
+    const actorsPromises = ids.map(async (id) => {
+      const actor = await getActorById(id);
+      return actor;
+    });
+    const actors = await Promise.all(actorsPromises);
     res.render("movie", {
-      movie: movie
+      movie: movie,
+      actors: actors,
+      activePage: 'movies',
     });
   }
 });
@@ -97,8 +148,13 @@ app.get("/actors/new", async (req, res) => {
 
 
 app.listen(app.get("port"), async () => {
-  await connect();
-  console.log( "[server] http://localhost:" + app.get("port"));
+  try{
+    await connect();
+    console.log("Server started on http://localhost:" + app.get("port"));
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
 });
 
 module.exports = app;

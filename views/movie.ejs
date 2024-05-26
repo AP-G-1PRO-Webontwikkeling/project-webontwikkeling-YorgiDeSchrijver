@@ -1,1 +1,77 @@
-<%= movie.title %>
+<%- include("partials/head") %>
+  <div class="flex flex-row">
+    <%- include("partials/sidebar") %>
+      <div class="flex flex-col max-h-screen w-full overflow-auto">
+        <%- include("partials/header") %>
+          <main class="m-3">
+            <div class="p-4 bg-white block sm:flex dark:bg-neutral-800 dark:border-neutral-700">
+              <img class="rounded-lg" src="<%= movie.poster %>" alt="">
+              <div class="flex flex-col ml-6">
+                <h1 class="font-bold text-5xl">
+                  <%= movie.title %>
+                </h1>
+                <div class="flex items-center gap-4 font-medium text-gray-500 mt-4">
+                  <div class="flex items-center gap-2"><span class="text-lg font-medium">
+                      <%= movie.genre %>
+                    </span></div>
+                  <div class="flex items-center gap-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                      viewBox="0 0 448 512" class="text-subMain w-3 h-3" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z">
+                      </path>
+                    </svg><span class="text-lg font-medium">
+                      <%= movie.year %>
+                    </span></div>
+                  <div class="flex items-center gap-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                      viewBox="0 0 24 24" class="text-subMain w-3 h-3" height="1em" width="1em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                      </path>
+                      <path d="M13 7h-2v6h6v-2h-4z"></path>
+                    </svg><span class="text-lg font-medium">
+                      <%= movie.runtime %>
+                    </span></div>
+                </div>
+
+                <p class="font-medium text-2xl text-neutral-700 max-w-screen-md mt-4">
+                  <%= movie.plot %>
+                </p>
+                <div class="flex flex-col gap-4 mt-4 items-start text-xl font-medium text-neutral-600">
+                  <p>Director: <%= movie.director %>
+                  </p>
+                  <p>Writer: <%= movie.writer %>
+                  </p>
+                  <p>Language: <%= movie.language %>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class="p-4 flex flex-row">
+              <div class="flex flex-col">
+                <h2 class="font-bold text-3xl">Actors</h2>
+                <div class="mt-4 flex flex-row flex-wrap w-full max-w-full gap-4">
+                  <% actors.forEach(actor=> { %>
+                    <a href="/actors/<%= actor.name %>" class="relative w-48 overflow-hidden rounded-lg">
+                      <% if (actor.image) { %>
+                       <img class="w-full h-full object-cover" src="<%= actor.image %>" alt="<%= actor.name %>">
+                      <% } else { %>
+                        <img class="w-full h-full object-cover" src="/assets/images/imagePlaceholder.png" alt="Image placeholder">
+                      <% } %>
+                      <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-25 text-white p-2">
+                        <p class="text-lg font-medium text-center">
+                          <%= actor.name %>
+                        </p>
+                      </div>
+                    </a>
+                    <% }) %>
+                      </ul>
+                </div>
+              </div>
+
+          </main>
+      </div>
+  </div>
+  <%- include("partials/footer") %>
