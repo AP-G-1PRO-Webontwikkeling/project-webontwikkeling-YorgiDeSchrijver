@@ -1,0 +1,122 @@
+<%- include("partials/head") %>
+  <div class="flex flex-row">
+    <%- include("partials/sidebar") %>
+      <div class="flex flex-col max-h-screen w-full overflow-auto">
+        <%- include("partials/header") %>
+          <main class="m-3">
+            <div
+              class="pt-4 px-4 bg-white block sm:flex items-center justify-between dark:bg-neutral-800 dark:border-neutral-700">
+              <div class="w-full">
+                <nav class="flex mb-5" aria-label="Breadcrumb">
+                  <ol class="inline-flex items-center space-x-1 text-sm font-semibold md:space-x-2">
+                    <li class="inline-flex items-center">
+                      <a href="/"
+                        class="inline-flex items-center text-neutral-400 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-white">
+                        <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                          </path>
+                        </svg>
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/movies" class="flex items-center">
+                        <svg class="w-6 h-6 text-neutral-400" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="ml-1 text-neutral-400 md:ml-2 dark:text-neutral-500"
+                          aria-current="page">Movies</span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="flex items-center">
+                        <svg class="w-6 h-6 text-neutral-700" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="ml-1 text-neutral-700 md:ml-2 dark:text-neutral-500" aria-current="page">
+                          Updating <%= movie.title %>
+                        </span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+                <h1 class="text-xl font-semibold text-neutral-900 sm:text-2xl dark:text-white">Editing <%= movie.title
+                    %>
+                </h1>
+              </div>
+            </div>
+            <form class="sm:pr-3 p-4 mt-5 gap-4" method="post">
+              <label for="year">year</label>
+              <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
+                <input type="text" name="year" id="year" value="<%= movie.year %>"
+                  class="pl-12 border border-neutral-200 placeholder:font-medium placeholder:text-base text-neutral-900 sm:text-sm rounded-lg focus:ring-neutral-300 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="year">
+                <svg class="absolute left-3 top-1/2 w-6 h-6 -translate-y-1/2 stroke-neutral-400" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <label for="director" class="mt-4">Director</label>
+              <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
+                <input type="text" name="director" id="director" value="<%= movie.director %>"
+                  class="pl-12 border border-neutral-200 placeholder:font-medium placeholder:text-base text-neutral-900 sm:text-sm rounded-lg focus:ring-neutral-300 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="director">
+                <svg class="absolute left-3 top-1/2 w-6 h-6 -translate-y-1/2 stroke-neutral-400" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <label for="language" class="mt-4">Language</label>
+              <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
+                <select name="language" id="language"
+                  class="pl-12 border border-neutral-200 placeholder:font-medium placeholder:text-base text-neutral-900 sm:text-sm rounded-lg focus:ring-neutral-300 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                  <option value="" disabled selected>Select a language</option>
+                  <option value="English" <%=movie.language==='English' ? 'selected' : '' %>>English</option>
+                  <option value="Spanish" <%=movie.language==='Spanish' ? 'selected' : '' %>>Spanish</option>
+                  <option value="French" <%=movie.language==='Spanish' ? 'selected' : '' %>>French</option>
+                  <option value="Dutch" <%=movie.language==='Spanish' ? 'selected' : '' %>>Dutch</option>
+                  <option value="German" <%=movie.language==='Spanish' ? 'selected' : '' %>>German</option>
+                  <option value="Italian" <%=movie.language==='Spanish' ? 'selected' : '' %>>Italian</option>
+                </select>
+              </div>
+              <label for="production" class="mt-4">Production</label>
+              <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
+                <input type="text" name="production" id="production" value="<%= movie.production %>"
+                  class="pl-12 border border-neutral-200 placeholder:font-medium placeholder:text-base text-neutral-900 sm:text-sm rounded-lg focus:ring-neutral-300 focus:border-neutral-500 block w-full p-2.5 dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="title">
+                <svg class="absolute left-3 top-1/2 w-6 h-6 -translate-y-1/2 stroke-neutral-400" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="relative w-48 mt-1 sm:w-64 xl:w-96 mt-4">
+                <button type="submit"
+                  class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 w-full hover:bg-blue-700 rounded py-2 transition duration-150 ease-in">
+                  <span class="mr-2 uppercase">Update</span>
+                  <span>
+                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </main>
+      </div>
+  </div>
+  <%- include("partials/footer") %>

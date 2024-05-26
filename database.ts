@@ -122,6 +122,10 @@ export async function getMovieByTitle(title: string) {
     return await moviesCollection.findOne({ title: title });
 }
 
+export async function updateMovie(movie: Movie) {
+    return await moviesCollection.updateOne({ title: movie.title }, { $set: movie });
+}
+
 export async function getActors() {
     return await actorsCollection.find().toArray();
 }

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { Actor, Movie } from "../types";
-import { getActorById, getActorByName, getActors, getMovieByTitle, getMovies } from "../database";
+import { getActorById, getActorByName, getActors, getMovieByTitle, getMovies, updateMovie } from "../database";
 import { ObjectId, WithId } from "mongodb";
 
 export function DashboardRouter(){
@@ -61,6 +61,35 @@ export function DashboardRouter(){
         activePage: 'movies',
       });
     }
+  });
+
+  router.get("/movies/:title/edit", async (req, res) => {
+    let title = req.params.title;
+    const movie: WithId<Movie> | null = await getMovieByTitle(title);
+    if (movie === null) {
+      res.status(404).send('Movie not found');
+    } else {
+      res.render("editMovie", {
+        movie: movie,
+        activePage: 'movies',
+      });
+    }
+  });
+
+  router.post("/movies/:title/edit", async (req, res) => {
+    let year = req.body.year;
+    let director = req.body.director;
+    let language = req.body.language; // this is a select
+    let production = req.body.production;
+    let title = req.params.title;
+    let movie = await getMovieByTitle(title);
+    if (movie === null) {
+      res.status(404).send('Error finding movie');
+      return;
+    }
+    movie = {...movie, year, director, language, production};
+    await updateMovie(movie);
+    res.redirect(`/movies/${title}`);
   });
   
   
