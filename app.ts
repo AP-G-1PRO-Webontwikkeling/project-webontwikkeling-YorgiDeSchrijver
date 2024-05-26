@@ -52,14 +52,14 @@ app.post("/login", async(req, res) => {
   }
 });
 
-app.get("/logout", (req, res) => {
+app.post("/logout", (req, res) => {
   req.session.destroy(() => {
     res.redirect("/login");
-});
+  });
 });
 
 
-app.get("/movies", async (req, res) => {
+app.get("/movies", secureMiddleware, async (req, res) => {
   const sortField = req.query.sortField ?? '';
   const sortDirection = req.query.sortDirection ?? '';
   const search = req.query.q ?? '';
@@ -85,11 +85,11 @@ app.get("/movies", async (req, res) => {
   });
 });
 
-app.get("/movies/new", async (req, res) => {
+app.get("/movies/new", secureMiddleware, async (req, res) => {
   res.render("newMovie");
 });
 
-app.get("/movies/:title", async (req, res) => {
+app.get("/movies/:title", secureMiddleware, async (req, res) => {
   let title = req.params.title;
   const movie: WithId<Movie> | null = await getMovieByTitle(title);
   if (movie === null) {
@@ -116,7 +116,7 @@ app.get("/movies/:title", async (req, res) => {
 
 
 
-app.get("/actors", async (req, res) => {
+app.get("/actors", secureMiddleware, async (req, res) => {
   const actors: Actor[] = await getActors();
   res.render("actors", {
     actors: actors,
@@ -124,7 +124,7 @@ app.get("/actors", async (req, res) => {
   });
 });
 
-app.get("/actors/new", async (req, res) => {
+app.get("/actors/new", secureMiddleware, async (req, res) => {
   res.render("newActor");
 });
 
