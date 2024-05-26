@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon -L app.ts",
     "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css",
-    "build": "tsc",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
