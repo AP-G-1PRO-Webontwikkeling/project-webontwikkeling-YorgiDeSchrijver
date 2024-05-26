@@ -58,6 +58,7 @@ app.post("/logout", (req, res) => {
   });
 });
 
+//Movies
 
 app.get("/movies", secureMiddleware, async (req, res) => {
   const sortField = req.query.sortField ?? '';
@@ -114,13 +115,31 @@ app.get("/movies/:title", secureMiddleware, async (req, res) => {
 
 
 
-
+// Actors
 
 app.get("/actors", secureMiddleware, async (req, res) => {
-  const actors: Actor[] = await getActors();
+  const sortField = req.query.sortField ?? '';
+  const sortDirection = req.query.sortDirection ?? '';
+  const search = req.query.q ?? '';
+  let actors: Actor[] = await getActors();
+  if(search){
+    const searchRegex = new RegExp(search as string, 'i');
+    actors = actors.filter(actor => {
+      return searchRegex.test(actor.name);
+    });
+  }
+  actors.sort((a, b) => {
+    let key = sortField as keyof Actor;
+      if (a[key] > b[key]) return sortDirection === 'asc' ? 1 : -1;
+      if (a[key] < b[key]) return sortDirection === 'asc' ? -1 : 1;
+    return 0;
+  });
   res.render("actors", {
     actors: actors,
-    activePage: 'actors'
+    activePage: 'actors',
+    sortDirection: sortDirection,
+    sortField: sortField,
+    search: search
   });
 });
 

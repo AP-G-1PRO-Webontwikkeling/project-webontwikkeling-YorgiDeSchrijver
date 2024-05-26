@@ -8,7 +8,6 @@ export interface User{
 }
 
 export interface Actor {
-  _id?: ObjectId;
   name: string;
   gender: string;
   age: number;
