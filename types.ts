@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb";
 
 export interface User{
   _id?: ObjectId;
-  email: string;
+  username: string;
   password: string;
   role: "ADMIN" | "USER";
 }
@@ -36,4 +36,9 @@ export interface Movie {
 export interface Rating {
   source: string;
   value: string;
+}
+
+export interface FlashMessage {
+  type: "error" | "success"
+  message: string;
 }

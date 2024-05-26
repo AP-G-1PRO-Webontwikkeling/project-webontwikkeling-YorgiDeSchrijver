@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import bcrypt from "bcrypt";
 import { Actor, Movie, User } from "./types";
+import { create } from "domain";
 
 export const MONGODB_URI = process.env.MONGODB_URI ?? "mongodb://localhost:27017";
 
@@ -54,11 +55,11 @@ export async function seed(){
                 await db.collection('Movies').insertOne(movieDoc);
             }
         }
-        if(await db.collection('Users').findOne({ email: 'admin@ap.be' }) == null){
-            await createUser('admin@ap.be', 'admin', 'ADMIN');
+        if(await db.collection('Users').findOne({ username: 'admin' }) == null){
+            await createUser('admin', 'admin', 'ADMIN');
         }
-        if(await db.collection('Users').findOne({ email: 'user@ap.be' }) == null){
-            await createUser('user@ap.be', 'user', 'USER');
+        if(await db.collection('Users').findOne({ username: 'user' }) == null){
+            await createUser('user', 'user', 'USER');
         }
         console.log('Data seeded successfully');
     } catch (error) {
@@ -66,27 +67,27 @@ export async function seed(){
     }
 }
 
-async function createUser(email: string, password: string, role: "ADMIN" | "USER"){
+async function createUser(username: string, password: string, role: "ADMIN" | "USER"){
     try {
         const db = client.db("WebDevProject");
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = {
-            email: email,
+            username: username,
             password: hashedPassword,
             role: role
         }
-        return await db.collection('Users').insertOne(user);
+        await db.collection('Users').insertOne(user);
     }
     catch (error) {
         console.error(error);
     }
 }
 
-export async function login(email: string, password: string){
-    if (email === "" || password === "") {
-        throw new Error("Email and password required");
+export async function login(username: string, password: string){
+    if (username === "" || password === "") {
+        throw new Error("username and password required");
     }
-    let user : User | null = await usersCollection.findOne<User>({email: email});
+    let user : User | null = await usersCollection.findOne<User>({username: username});
     if (user) {
         if (await bcrypt.compare(password, user.password!)) {
             return user;
@@ -95,6 +96,21 @@ export async function login(email: string, password: string){
         }
     } else {
         throw new Error("User not found");
+    }
+}
+
+export async function register(username: string, password: string) {
+    if (username === "" || password === "") {
+        throw new Error("username and password required");
+    }
+    let user : User | null = await usersCollection.findOne<User>({username: username});
+    if (!user) {
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await createUser(username, hashedPassword, "USER");
+        return await usersCollection.findOne<User>({username: username});
+        
+    } else {
+        throw new Error("User already exists");
     }
 }
 

@@ -7,6 +7,7 @@ import session from "./session";
 import { secureMiddleware } from "./secureMiddleware";
 import { AuthRouter } from "./routes/authRouter";
 import { DashboardRouter } from "./routes/dashboardRouter";
+import { flashMiddleware } from "./flashMiddleware";
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
@@ -26,10 +27,11 @@ app.set("port", 3000);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(flashMiddleware);
 
 //Routes
-app.use(AuthRouter);
-app.use(DashboardRouter, secureMiddleware);
+app.use(AuthRouter());
+app.use(DashboardRouter(), secureMiddleware);
 
 
 app.listen(app.get("port"), async () => {

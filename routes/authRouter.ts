@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { secureMiddleware } from "../secureMiddleware";
-import { login } from "../database";
+import { login, register } from "../database";
 import { User } from "../types";
 
 export function AuthRouter(){
@@ -13,15 +13,39 @@ export function AuthRouter(){
   });
   
   router.post("/login", async(req, res) => {
-    const email : string = req.body.email;
+    const username : string = req.body.username;
     const password : string = req.body.password;
     try {
-      let user : User = await login(email, password);
+      let user : User = await login(username, password);
       user = { ...user, password: '' }; // Remove password from user object
       req.session.user = user;
+      req.session.message = {type: "success", message: "Login successful"};
       res.redirect("/")
     } catch (e : any) {
+      req.session.message = {type: "error", message: e.message};
       res.redirect("/login");
+    }
+  });
+
+  router.get("/register", (req, res) => {
+    if(req.session.user){
+      res.redirect("/");
+    } else res.render("register");
+  });
+
+  router.post("/register", async (req, res) => {
+    const username: string = req.body.username;
+    const password: string = req.body.password;
+    try {
+      let user : User | null = await register(username, password);
+      if(user === null) throw new Error("User already exists");
+      user = { ...user, password: '' }; // Remove password from user object
+      req.session.message = {type: "success", message: "Register successful"};
+      req.session.user = user;
+      res.redirect("/");
+    } catch (e : any) {
+      req.session.message = {type: "error", message: e.message};
+      res.redirect("/register");
     }
   });
   
@@ -30,4 +54,6 @@ export function AuthRouter(){
       res.redirect("/login");
     });
   });
+
+  return router;
 }
